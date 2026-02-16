@@ -26,7 +26,8 @@ const BeatShowcase = () => {
             Mis <span className="text-gradient-gold">Beats</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-md mx-auto">
-            Explora mi colección de instrumentales producidos con la más alta calidad.
+            Explora mi colección variada de instrumentales. Encontrarás beats de Trap, Hyperpop, R&B y más, 
+            cada uno diseñado para inspirar tu creatividad y elevar tu música al siguiente nivel.
           </p>
         </motion.div>
 
