@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Award, Disc3, Users, Zap } from "lucide-react";
 
 const stats = [
-  { icon: Disc3, label: "Beats Producidos", value: "20+" },
+  { icon: Disc3, label: "Beats Producidos", value: "10+" },
   { icon: Award, label: "Años de Experiencia", value: "1+" },
-  { icon: Zap, label: "Géneros", value: "4+" },
+  { icon: Zap, label: "Géneros", value: "5+" },
 ];
 
 const AboutSection = () => {
@@ -26,16 +26,15 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Soy un productor musical con unos años de experiencia creando 
-                instrumentales de todo tipo. Mi pasión por la música me hace aprender 
+                Soy un chaval de 25 años que le encanta hacer música. Mi pasión por la música me hace aprender 
                 cada día más sobre producción y sonido, y me esfuerzo por ofrecer beats 
-                de la más alta calidad a mis clientes.  
+                de la calidad más alta posible.
               </p>
               <p>
-                Especializado en Trap, Hip-Hop, R&B y música urbana, cada beat que 
-                produzco está diseñado para destacar. Me gusta probar nuevos sonidos y 
-                técnicas para mantener mi música fresca e innovadora. Trabajo con los 
-                mejores plugins y equipo profesional para garantizar una calidad de sonido excepcional.
+                Hago Trap, Hip-Hop, R&B y música urbana. Cada beat que 
+                produzco está diseñado para ser único y atractivo. Me gusta probar nuevos sonidos y 
+                técnicas para mantener mi música fresca e innovadora. Trabajo con plugins de calidad 
+                para asegurar que cada beat suene profesional y listo para ser usado en cualquier proyecto.
               </p>
             </div>
           </motion.div>
