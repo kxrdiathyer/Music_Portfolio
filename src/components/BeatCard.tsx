@@ -14,7 +14,7 @@ interface BeatCardProps {
   onPlay: () => void;
 }
 
-const BeatCard = ({ title, genre, bpm, duration, audioUrl, index }: BeatCardProps) => {
+const BeatCard = ({ title, genre, bpm, duration, audioUrl, index, isActive, onPlay }: BeatCardProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
