@@ -6,10 +6,12 @@ interface BeatCardProps {
   title: string;
   genre: string;
   bpm: number;
-  key: string;
+  key?: string;
   duration: string;
   audioUrl: string;
   index: number;
+  isActive: boolean;
+  onPlay: () => void;
 }
 
 const BeatCard = ({ title, genre, bpm, duration, audioUrl, index }: BeatCardProps) => {
@@ -18,6 +20,9 @@ const BeatCard = ({ title, genre, bpm, duration, audioUrl, index }: BeatCardProp
   const audioRef = useRef<HTMLAudioElement>(null);
 
   const togglePlay = () => {
+    if (!isPlaying) {
+      onPlay(); // Notifica al padre que este debe ser el activo
+    }
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
@@ -49,6 +54,14 @@ const BeatCard = ({ title, genre, bpm, duration, audioUrl, index }: BeatCardProp
       audio.removeEventListener("ended", handleEnded);
     };
   }, []);
+
+  // Si no es el activo, pausa
+  useEffect(() => {
+    if (!isActive && isPlaying && audioRef.current) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    }
+  }, [isActive]);
 
   useEffect(() => {
     if (audioRef.current) {

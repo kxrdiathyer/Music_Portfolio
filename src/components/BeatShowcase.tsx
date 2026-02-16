@@ -11,6 +11,7 @@ const beats = [
 ];
 
 const BeatShowcase = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   return (
     <section id="beats" className="py-24 bg-noise">
       <div className="container mx-auto px-4">
@@ -41,6 +42,8 @@ const BeatShowcase = () => {
               duration={beat.duration}
               audioUrl={beat.audioUrl}
               index={index}
+              isActive={activeIndex === index}
+              onPlay={() => setActiveIndex(index)}
             />
           ))}
         </div>
@@ -49,4 +52,5 @@ const BeatShowcase = () => {
   );
 };
 
+import { useState } from "react";
 export default BeatShowcase;
