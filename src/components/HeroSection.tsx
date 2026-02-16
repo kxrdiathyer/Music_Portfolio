@@ -35,8 +35,7 @@ const HeroSection = () => {
           </h1>
 
           <p className="max-w-lg mx-auto text-muted-foreground text-lg md:text-xl">
-            Instrumentales profesionales para artistas que buscan el sonido perfecto. 
-            Trap, Hip-Hop, R&B y más.
+            Instrumentales diferentes y únicas para artistas que buscan un sonido auténtico.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
