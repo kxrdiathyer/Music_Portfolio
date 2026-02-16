@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import BeatCard from "./BeatCard";
 
 const beats = [
-  { title: "Midnight Flow", genre: "Trap", bpm: 140, musicalKey: "Cm", duration: "3:24" },
-  { title: "Golden Hour", genre: "R&B", bpm: 90, musicalKey: "Ab", duration: "3:48" },
-  { title: "Dark Vibes", genre: "Hip-Hop", bpm: 85, musicalKey: "Dm", duration: "4:02" },
-  { title: "Neon Dreams", genre: "Trap Soul", bpm: 130, musicalKey: "Em", duration: "3:15" },
-  { title: "Ocean Drive", genre: "Pop", bpm: 110, musicalKey: "F", duration: "3:36" },
-  { title: "Shadow Play", genre: "Drill", bpm: 145, musicalKey: "Gm", duration: "2:58" },
+  { title: "Oh darling", genre: "EDM", bpm: 150, musicalKey: "Fm", duration: "4:01", audioUrl: "/beats/KT_EDM_Beat_Oh_Darling_Tagged.wav" },
+  { title: "Bubblecore", genre: "Hyperpop", bpm: 80, musicalKey: "GM", duration: "3:43", audioUrl: "/beats/KT_Hyperpop_Beat_Bubblecore_Tagged.wav" },
+  { title: "Lovely", genre: "Trap Sad", bpm: 140, musicalKey: "Am", duration: "3:06", audioUrl: "/beats/KT_R&B_Beat_Lovely_Tagged.wav" },
+  { title: "Let You Down", genre: "Trap Sad", bpm: 80, musicalKey: "Dm", duration: "3:46", audioUrl: "/beats/KT_TrapSad_Beat_Let_You_Down_Tagged.wav" },
+  { title: "Limit", genre: "Trap", bpm: 140, musicalKey: "Dm", duration: "3:02", audioUrl: "/beats/KT_Trap_Beat_Limit_Tagged.wav" },
+  { title: "Pray", genre: "Trap", bpm: 72, musicalKey: "C♯m", duration: "3:12", audioUrl: "/beats/KT_Trap_Beat_Pray_Tagged.wav" },
 ];
 
 const BeatShowcase = () => {
@@ -38,6 +38,7 @@ const BeatShowcase = () => {
               genre={beat.genre}
               bpm={beat.bpm}
               duration={beat.duration}
+              audioUrl={beat.audioUrl}
               index={index}
             />
           ))}
