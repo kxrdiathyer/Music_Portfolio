@@ -4,7 +4,7 @@ import BeatCard from "./BeatCard";
 const beats = [
   { title: "Oh darling", genre: "EDM", bpm: 150, musicalKey: "Fm", duration: "4:01", audioUrl: "/beats/KT_EDM_Beat_Oh_Darling_Tagged.wav" },
   { title: "Bubblecore", genre: "Hyperpop", bpm: 80, musicalKey: "GM", duration: "3:43", audioUrl: "/beats/KT_Hyperpop_Beat_Bubblecore_Tagged.wav" },
-  { title: "Lovely", genre: "Trap Sad", bpm: 140, musicalKey: "Am", duration: "3:06", audioUrl: "/beats/KT_R&B_Beat_Lovely_Tagged.wav" },
+  { title: "Lovely", genre: "R&B", bpm: 140, musicalKey: "Am", duration: "3:06", audioUrl: "/beats/KT_R&B_Beat_Lovely_Tagged.wav" },
   { title: "Let You Down", genre: "Trap Sad", bpm: 80, musicalKey: "Dm", duration: "3:46", audioUrl: "/beats/KT_TrapSad_Beat_Let_You_Down_Tagged.wav" },
   { title: "Limit", genre: "Trap", bpm: 140, musicalKey: "Dm", duration: "3:02", audioUrl: "/beats/KT_Trap_Beat_Limit_Tagged.wav" },
   { title: "Pray", genre: "Trap", bpm: 72, musicalKey: "C♯m", duration: "3:12", audioUrl: "/beats/KT_Trap_Beat_Pray_Tagged.wav" },
