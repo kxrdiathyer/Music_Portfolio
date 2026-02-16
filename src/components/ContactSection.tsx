@@ -23,11 +23,11 @@ const ContactSection = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <a
-              href="mailto:miguel.tuemail@gmail.com"
+              href="mailto:kxrdiathyer@gmail.com"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold text-sm hover:scale-105 glow-gold transition-all duration-300"
             >
               <Mail size={18} />
-              miguelpantera7@gmail.com
+              kxrdiathyer@gmail.com
             </a>
             <a
               href="https://instagram.com/kxrdiathyer"
