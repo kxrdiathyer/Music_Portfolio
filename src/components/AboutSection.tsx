@@ -27,9 +27,9 @@ const AboutSection = () => {
             </h2>
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
-                Soy un productor musical con más de 8 años de experiencia creando 
-                instrumentales que conectan con artistas de todo el mundo. Mi estudio 
-                es donde las ideas cobran vida.
+                Soy un productor musical con unos años de experiencia creando 
+                instrumentales de todo tipo. Mi pasión por la música me hace aprender cada día más sobre producción y sonido, 
+                y me esfuerzo por ofrecer beats de la más alta calidad a mis clientes.  
               </p>
               <p>
                 Especializado en Trap, Hip-Hop, R&B y música urbana, cada beat que 
