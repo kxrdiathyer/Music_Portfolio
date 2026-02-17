@@ -1,6 +1,14 @@
 import { motion } from "framer-motion";
 import { Mail, Instagram, MessageCircle } from "lucide-react";
 
+// Logo BeatStars SVG
+const BeatStarsLogo = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg width={18} height={18} viewBox="0 0 32 32" fill="none" {...props}>
+    <rect width="32" height="32" rx="6" fill="#000"/>
+    <path d="M8 24L16 8L24 24H20.5L19.1 21H12.9L11.5 24H8ZM13.7 18.5H18.3L16 13.7L13.7 18.5Z" fill="#fff"/>
+  </svg>
+);
+
 const ContactSection = () => {
   return (
     <section id="contact" className="py-24 bg-noise">
@@ -46,6 +54,15 @@ const ContactSection = () => {
             >
               <MessageCircle size={18} />
               WhatsApp
+            </a>
+            <a
+              href="https://www.beatstars.com/kxrdiathyer"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-border text-foreground font-semibold text-sm hover:border-primary hover:text-primary transition-all duration-300"
+            >
+              <BeatStarsLogo />
+              BeatStars
             </a>
           </div>
         </motion.div>
