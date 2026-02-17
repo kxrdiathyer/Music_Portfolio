@@ -8,6 +8,10 @@ const beats = [
   { title: "Let You Down", genre: "Trap Sad", bpm: 80, musicalKey: "Dm", duration: "3:46", audioUrl: "/beats/KT_TrapSad_Beat_Let_You_Down_Tagged.wav" },
   { title: "Limit", genre: "Trap", bpm: 140, musicalKey: "Dm", duration: "3:02", audioUrl: "/beats/KT_Trap_Beat_Limit_Tagged.wav" },
   { title: "Pray", genre: "Trap", bpm: 72, musicalKey: "C♯m", duration: "3:12", audioUrl: "/beats/KT_Trap_Beat_Pray_Tagged.wav" },
+  // Espacios extra para nuevas pistas:
+  { title: "No Lovin", genre: "Chill Trap", bpm: 54, musicalKey: "D♯M", duration: "3:37", audioUrl: "/beats/KT_TrapSad_Beat_No_Lovin_Tagged.wav" },
+  { title: "Nothing Like Us", genre: "Trap Sad", bpm: 130, musicalKey: "D♭m", duration: "3:17", audioUrl: "/beats/KT_TrapSad_Beat_Nothing_Like_Us_Tagged.wav"  },
+  { title: "Remember Me", genre: "Trap Sad", bpm: 124, musicalKey: "D♭m", duration: "2:39", audioUrl: "/beats/KT_TrapSad_Beat_Remember_Me_Tagged.wav"  },
 ];
 
 const BeatShowcase = () => {
