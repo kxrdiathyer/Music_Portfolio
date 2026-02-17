@@ -25,7 +25,7 @@ const HeroSection = () => {
         >
           <div className="flex items-center justify-center gap-2 text-primary">
             <Headphones size={20} />
-            <span className="text-sm font-medium tracking-[0.3em] uppercase">Productor Musical</span>
+            <span className="text-sm font-medium tracking-[0.3em] uppercase">KXRDIA THYER</span>
           </div>
 
           <h1 className="font-display font-extrabold text-5xl md:text-7xl lg:text-8xl tracking-tight leading-none">
