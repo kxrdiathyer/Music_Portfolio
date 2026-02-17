@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <a href="#hero" className="font-display font-extrabold text-xl text-gradient-gold tracking-tight">
-          KT BEATS
+          KT ON THE BEAT!
         </a>
 
         {/* Desktop */}
