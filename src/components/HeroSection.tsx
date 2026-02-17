@@ -41,6 +41,29 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <a
               href="#beats"
+              onClick={e => {
+                e.preventDefault();
+                const el = document.getElementById('beats');
+                if (!el) return;
+                const startY = window.scrollY;
+                const endY = el.getBoundingClientRect().top + window.scrollY;
+                const distance = endY - startY;
+                const duration = 1200;
+                let startTime = null;
+                function animateScroll(currentTime) {
+                  if (!startTime) startTime = currentTime;
+                  const timeElapsed = currentTime - startTime;
+                  const progress = Math.min(timeElapsed / duration, 1);
+                  const ease = progress < 0.5
+                    ? 2 * progress * progress
+                    : -1 + (4 - 2 * progress) * progress;
+                  window.scrollTo(0, startY + distance * ease);
+                  if (progress < 1) {
+                    requestAnimationFrame(animateScroll);
+                  }
+                }
+                requestAnimationFrame(animateScroll);
+              }}
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-primary text-primary-foreground font-semibold text-sm hover:scale-105 glow-gold transition-all duration-300"
             >
               <Play size={18} />
@@ -48,6 +71,29 @@ const HeroSection = () => {
             </a>
             <a
               href="#contact"
+              onClick={e => {
+                e.preventDefault();
+                const el = document.getElementById('contact');
+                if (!el) return;
+                const startY = window.scrollY;
+                const endY = el.getBoundingClientRect().top + window.scrollY;
+                const distance = endY - startY;
+                const duration = 1200;
+                let startTime = null;
+                function animateScroll(currentTime) {
+                  if (!startTime) startTime = currentTime;
+                  const timeElapsed = currentTime - startTime;
+                  const progress = Math.min(timeElapsed / duration, 1);
+                  const ease = progress < 0.5
+                    ? 2 * progress * progress
+                    : -1 + (4 - 2 * progress) * progress;
+                  window.scrollTo(0, startY + distance * ease);
+                  if (progress < 1) {
+                    requestAnimationFrame(animateScroll);
+                  }
+                }
+                requestAnimationFrame(animateScroll);
+              }}
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-border text-foreground font-semibold text-sm hover:border-primary hover:text-primary transition-all duration-300"
             >
               Contactar
