@@ -12,10 +12,22 @@ const Navbar = () => {
     { label: "Contacto", href: "#contact" },
   ];
 
+  // Scroll suave animado
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const id = href.replace('#', '');
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
-        <a href="#hero" className="font-display font-extrabold text-xl text-gradient-gold tracking-tight">
+        <a href="#hero" className="font-display font-extrabold text-xl text-gradient-gold tracking-tight"
+          onClick={e => handleSmoothScroll(e, '#hero')}
+        >
           KT ON THE BEAT!
         </a>
 
@@ -25,6 +37,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
+              onClick={e => handleSmoothScroll(e, link.href)}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300"
             >
               {link.label}
@@ -55,7 +68,7 @@ const Navbar = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={e => { handleSmoothScroll(e, link.href); setIsOpen(false); }}
                   className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
                 >
                   {link.label}
