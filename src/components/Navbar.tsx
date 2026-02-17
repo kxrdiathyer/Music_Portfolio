@@ -12,14 +12,34 @@ const Navbar = () => {
     { label: "Contacto", href: "#contact" },
   ];
 
-  // Scroll suave animado
+
+  // Scroll suave personalizado y lento
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const id = href.replace('#', '');
     const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+    if (!el) return;
+
+    const startY = window.scrollY;
+    const endY = el.getBoundingClientRect().top + window.scrollY;
+    const distance = endY - startY;
+    const duration = 1200; // milisegundos (más alto = más lento)
+    let startTime: number | null = null;
+
+    function animateScroll(currentTime: number) {
+      if (!startTime) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+      // easeInOutQuad
+      const ease = progress < 0.5
+        ? 2 * progress * progress
+        : -1 + (4 - 2 * progress) * progress;
+      window.scrollTo(0, startY + distance * ease);
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
     }
+    requestAnimationFrame(animateScroll);
   };
 
   return (
