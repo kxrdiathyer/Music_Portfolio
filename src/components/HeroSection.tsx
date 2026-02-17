@@ -34,7 +34,7 @@ const HeroSection = () => {
             <span className="text-gradient-gold">INSPIRAN</span>
           </h1>
 
-          <p className="max-w-lg mx-auto text-muted-foreground text-lg md:text-xl bg-black/60 rounded-lg px-4 py-2 shadow-lg text-white backdrop-blur-sm" style={{textShadow: '0 2px 8px #000, 0 1px 1px #000'}}> 
+          <p className="max-w-lg mx-auto text-muted-foreground text-lg md:text-xl bg-black/25 rounded-lg px-4 py-2 shadow-lg text-white backdrop-blur-sm" style={{textShadow: '0 2px 8px #000, 0 1px 1px #000'}}> 
             Instrumentales diferentes y únicas para artistas que buscan un sonido auténtico.
           </p>
 
