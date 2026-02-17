@@ -15,7 +15,21 @@
     <meta property="og:image" content="/image/generated-image-07e22b76-ed47-4211-a581-d42ab29efb1e.png" />
     <link rel="icon" type="image/png" href="/image/generated-image-07e22b76-ed47-4211-a581-d42ab29efb1e.png" />
   </head>
+  <script>
+    const scrollToSection = (sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerOffset = 0;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    };
+  </script>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
