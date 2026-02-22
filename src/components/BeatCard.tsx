@@ -14,22 +14,51 @@ interface BeatCardProps {
   onPlay: () => void;
 }
 
-const BeatCard = ({ title, genre, bpm, duration, audioUrl, index, isActive, onPlay }: BeatCardProps) => {
+function BeatCard({ title, genre, bpm, duration, audioUrl, index, isActive, onPlay }: BeatCardProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
+  const randomBeats = [
+    "/beats/KT_EDM_Beat_Oh_Darling_Tagged.wav",
+    "/beats/KT_Hyperpop_Beat_Bubblecore_Tagged.wav",
+    "/beats/KT_R&B_Beat_Lovely_Tagged.wav",
+    "/beats/KT_TrapSad_Beat_Let_You_Down_Tagged.wav",
+    "/beats/KT_Trap_Beat_Limit_Tagged.wav",
+    "/beats/KT_Hard_Trap_Beat_Bullet_Tagged.wav",
+    "/beats/KT_TrapSad_Beat_No_Lovin_Tagged.wav",
+    "/beats/KT_TrapSad_Beat_Nothing_Like_Us_Tagged.wav",
+    "/beats/KT_TrapSad_Beat_Remember_Me_Tagged.wav"
+  ];
 
   const togglePlay = () => {
     if (!isPlaying) {
       onPlay(); // Notifica al padre que este debe ser el activo
-    }
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
+      if (audioRef.current) {
         audioRef.current.play();
+        setIsPlaying(true);
       }
-      setIsPlaying(!isPlaying);
+    } else {
+      // Pausa el audio actual
+      if (audioRef.current) {
+        audioRef.current.pause();
+        audioRef.current.currentTime = 0;
+        setIsPlaying(false);
+      }
+    }
+  };
+
+  // Botón para reproducir otro beat aleatorio
+  const playRandomBeat = () => {
+    // Pausa el audio actual
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+      setIsPlaying(false);
+      // Cambia la fuente del audioRef
+      const randomIndex = Math.floor(Math.random() * randomBeats.length);
+      audioRef.current.src = randomBeats[randomIndex];
+      audioRef.current.play();
+      setIsPlaying(true);
     }
   };
 
