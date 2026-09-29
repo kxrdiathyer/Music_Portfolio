@@ -45,18 +45,25 @@ const AboutSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="grid grid-cols-2 gap-4"
+            className="space-y-4"
           >
-            {stats.map((stat, i) => (
-              <div
-                key={stat.label}
-                className="bg-card border border-border rounded-xl p-6 text-center hover:border-primary/40 transition-colors duration-300"
-              >
-                <stat.icon className="mx-auto mb-3 text-primary" size={28} />
-                <div className="font-display font-extrabold text-3xl text-foreground">{stat.value}</div>
-                <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
-              </div>
-            ))}
+            <img
+              src="/image/Imagen%20de%20WhatsApp%202025-04-06%20a%20las%2021.25.19_ecfa1988.jpg"
+              alt="Retrato del productor musical"
+              className="aspect-[4/3] w-full rounded-xl border border-border object-cover object-center"
+            />
+            <div className="grid grid-cols-2 gap-4">
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="bg-card border border-border rounded-xl p-6 text-center hover:border-primary/40 transition-colors duration-300"
+                >
+                  <stat.icon className="mx-auto mb-3 text-primary" size={28} />
+                  <div className="font-display font-extrabold text-3xl text-foreground">{stat.value}</div>
+                  <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </div>
       </div>
